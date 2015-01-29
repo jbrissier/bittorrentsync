@@ -1,0 +1,10 @@
+
+syncserver:
+#  image: shykes/bittorrentsync:latest
+  build: .
+  ports:
+    - "8888:8888"
+    - "5555:5555"
+  volumes:
+    - /mnt/ftpmirror:/data
+    - /data/syncserver:/btsync
